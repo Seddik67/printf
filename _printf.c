@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 		{"%d", print_i},
 		{"%i", print_d},
 		{"%c", print_c},
-		{"%S", print_s},
+		{"%s", print_s},
 	};
 
 	va_list args;
