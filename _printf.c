@@ -6,7 +6,7 @@
  * Return: the length of the string.
  */
 
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	convert p[] = {
 		{"%s", print_s}, {"%c", print_c}, {"%%", print_37},

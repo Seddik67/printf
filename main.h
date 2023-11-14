@@ -24,6 +24,6 @@ int _putchar(char c);
 int print_s(va_list val);
 int _strlen(char *s);
 int _strlenc(const char *s);
-int _printf(const char * const format, ...);
+int _printf(const char *format, ...);
 
 #endif
