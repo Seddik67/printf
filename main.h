@@ -25,5 +25,7 @@ int print_s(va_list val);
 int _strlen(char *s);
 int _strlenc(const char *s);
 int _printf(const char *format, ...);
+int print_i(va_list args);
+int print_d(va_list args);
 
 #endif
