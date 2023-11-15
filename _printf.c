@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 		{"%s", print_s},
 		{"%b", print_bin},
 		{"%R", print_rot13},
+		{"%r", print_revs},
 	};
 
 	va_list args;
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		j = 6;
+		j = 7;
 		while (j >= 0)
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
