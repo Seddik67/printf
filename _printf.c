@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{"%b", print_bin},
 		{"%R", print_rot13},
 		{"%r", print_revs},
+		{"%p", print_pointer}
 	};
 
 	va_list args;
@@ -25,10 +26,12 @@ int _printf(const char *format, ...)
 	int length = 0;
 
 	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
 	while (format[i] != '\0')
 	{
-		j = 7;
+		j = 8;
 		while (j >= 0)
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
@@ -43,7 +46,6 @@ int _printf(const char *format, ...)
 		length++;
 		i++;
 	}
-
 	va_end(args);
 	return (length);
 }
