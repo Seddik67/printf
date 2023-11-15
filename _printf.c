@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{"%i", print_d},
 		{"%c", print_c},
 		{"%s", print_s},
+		{"%b", print_bin},
 	};
 
 	va_list args;
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		j = 4;
+		j = 5;
 		while (j >= 0)
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
