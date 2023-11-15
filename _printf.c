@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"%c", print_c},
 		{"%s", print_s},
 		{"%b", print_bin},
+		{"%R", print_rot13},
 	};
 
 	va_list args;
