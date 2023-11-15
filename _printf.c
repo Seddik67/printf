@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		{"%b", print_bin},
 		{"%R", print_rot13},
 		{"%r", print_revs},
-		{"%p", print_pointer}
+		{"%p", print_pointer},
 	};
 
 	va_list args;
